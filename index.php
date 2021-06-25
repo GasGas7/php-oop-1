@@ -64,38 +64,49 @@ $films_two = [
         <h1>Films with OOP</h1>
     </header>
     <main id="films">
-    
-    
+
+
         <h3>Films with Movie_one Class 👇</h3>
+        <hr>
         <div class="d-flex">
-            
-            
+
+
             <div class="film_one d-flex flex-column align-items-center col-3">
                 <h3><?php echo $ritornoAlFuturo->title ?></h3>
                 <p><?php echo $ritornoAlFuturo->overview ?></p>
-                <p>Anno: <?php echo $ritornoAlFuturo->year;?></p>
+                <p>Anno: <?php echo $ritornoAlFuturo->year; ?></p>
                 <p>Box-office: <?php echo $ritornoAlFuturo->boxOffice ?></p>
                 <img class="img-fluid" src="<?= $ritornoAlFuturo->poster ?>" style="width: 50%;" alt="">
                 <p>Acquistato: <?php echo $ritornoAlFuturo->purchase ?></p>
             </div>
 
+            <div class="film_one d-flex flex-column align-items-center col-3">
+                <h3><?php echo $batman->title ?></h3>
+                <p><?php echo $batman->overview ?></p>
+                <p>Anno: <?php echo $batman->year; ?></p>
+                <p>Box-office: <?php echo $batman->boxOffice ?></p>
+                <img class="img-fluid" src="<?= $batman->poster ?>" style="width: 50%;" alt="">
+                <p>Acquistato: <?php echo $batman->purchase ?></p>
+            </div>
+
 
         </div>
+
         <hr>
-        <div>
-            <h3>Films with Movie_two Class</h3>
-            <?php foreach ($variable as $key => $value) : ?>
 
-
+        <h3>Films with Movie_two Class 👇</h3>
+        <hr>
+        <div class="d-flex">
+            <?php foreach ($films_two as $movie) : ?>
+                <div class="film_two d-flex flex-column align-items-center col-3">
+                    <h3><?php echo $movie->title ?></h3>
+                    <p><?php echo $movie->overview ?></p>
+                    <p>Anno: <?php echo $movie->year; ?></p>
+                    <p>Box-office: <?php echo $movie->boxOffice ?></p>
+                    <img class="img-fluid" src="<?= $movie->poster ?>" style="width: 50%;" alt="">
+                </div>
             <?php endforeach ?>
-
-
         </div>
-
-
-
-
     </main>
 </body>
-
 </html>
