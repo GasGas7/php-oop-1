@@ -14,7 +14,7 @@ $ritornoAlFuturo->year = 1985;
 $ritornoAlFuturo->genre = 'Comedy';
 $ritornoAlFuturo->boxOffice = 210 . 'billion';
 $ritornoAlFuturo->poster = 'https://m.media-amazon.com/images/I/61ZEcXTypgS._AC_SY606_.jpg';
-$ritornoAlFuturo->is_Purchase('No');
+$ritornoAlFuturo->is_Purchase(false);
 
 $batman = new Movies_one();
 $batman->title = "Batman - Il Cavaliere Oscuro";
@@ -23,7 +23,7 @@ $batman->year = 2008;
 $batman->genre = 'Action/Adventure';
 $batman->boxOffice = 1.005 . 'billion';
 $batman->poster = 'https://images-na.ssl-images-amazon.com/images/I/71orNWLau5L._AC_SY606_.jpg';
-$batman->is_Purchase('Yes');
+$batman->is_Purchase(true);
 
 #var_dump($ritornoAlFuturo, $batman);
 
@@ -96,7 +96,7 @@ $films_two = [
 
         <h3>Films with Movie_two Class 👇</h3>
         <hr>
-        <div class="d-flex">
+        <div class="d-flex mb-5">
             <?php foreach ($films_two as $movie) : ?>
                 <div class="film_two d-flex flex-column align-items-center col-3">
                     <h3><?php echo $movie->title ?></h3>
