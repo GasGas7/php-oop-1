@@ -16,21 +16,21 @@ class Movies_one
     public $genre;
     public $boxOffice;
     public $poster;
-    public $purchase = false;
+    public $purchase = 'No';
 
     
     /**
      * Undocumented function
      *
-     * @param string $Is_purchase == 'Yes' or 'No'
+     * @param boolean $Is_purchase == 'true'  or 'false'
      * @return boolean
      */
     public function is_Purchase($Is_purchase)
     {   
-        if ($Is_purchase == "Yes"){
-            return $this->purchase = true;
+        if ($Is_purchase == true){
+            return $this->purchase = 'Yes';
         } else {
-            return $this->purchase = false;
+            return $this->purchase = 'No';
         }    
     } 
 }

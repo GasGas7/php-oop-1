@@ -6,6 +6,7 @@
 require __DIR__ . '/classes/movies.php';
 
 /* ####### With first class movies ####### */
+
 $ritornoAlFuturo = new Movies_one();
 $ritornoAlFuturo->title = "Ritorno Al Futuro";
 $ritornoAlFuturo->overview = 'Il diciottenne Marty ha come amico un bislacco scienziato che ha inventato una macchina per viaggiare nel tempo. Grazie ad essa Marty tornerà indietro nel tempo, fino al 1955.';
@@ -30,14 +31,14 @@ $batman->is_Purchase('Yes');
 
 /* ####### With second class movies ####### */
 
-$films = [
+$films_two = [
     new Movies_two('Venom', "Eddie Brock, giornalista, svolge indagini sulle poco chiare sperimentazioni condotte da una torbida organizzazione denominata Life Foundation. L'uomo, però, viene contaminato da una forma di vita aliena.", 2008, 'Action/Sci-fi', 856.1 . 'million', 'https://www.justnerd.it/wp-content/uploads/2018/08/venom-poster-giapponese.jpg'),
 
     new Movies_two('Spiderman', "Il morso di un ragno mutante dona degli incredibili, e inaspettati, poteri al giovane Peter Parker, che li usa nella guerra contro un minaccioso nemico.", 2002, 'Action/Sci-fi', 856.1 . 'million', 'https://metropolitanmagazine.it/wp-content/uploads/2021/04/spider-man-tobey-maguire.jpg'),
 
     new Movies_two('Venom', "Eddie Brock, giornalista, svolge indagini sulle poco chiare sperimentazioni condotte da una torbida organizzazione denominata Life Foundation. L'uomo, però, viene contaminato da una forma di vita aliena.", 2008, 'Action/Sci-fi', 825 . 'million', 'https://www.justnerd.it/wp-content/uploads/2018/08/venom-poster-giapponese.jpg')
 
-    ];
+];
 
 #var_dump($films);
 
@@ -48,13 +49,53 @@ $films = [
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>FILMS</title>
 </head>
+
 <body>
+    <header>
+        <h1>Films with OOP</h1>
+    </header>
+    <main id="films">
     
+    
+        <h3>Films with Movie_one Class 👇</h3>
+        <div class="d-flex">
+            
+            
+            <div class="film_one d-flex flex-column align-items-center col-3">
+                <h3><?php echo $ritornoAlFuturo->title ?></h3>
+                <p><?php echo $ritornoAlFuturo->overview ?></p>
+                <p>Anno: <?php echo $ritornoAlFuturo->year;?></p>
+                <p>Box-office: <?php echo $ritornoAlFuturo->boxOffice ?></p>
+                <img class="img-fluid" src="<?= $ritornoAlFuturo->poster ?>" style="width: 50%;" alt="">
+                <p>Acquistato: <?php echo $ritornoAlFuturo->purchase ?></p>
+            </div>
+
+
+        </div>
+        <hr>
+        <div>
+            <h3>Films with Movie_two Class</h3>
+            <?php foreach ($variable as $key => $value) : ?>
+
+
+            <?php endforeach ?>
+
+
+        </div>
+
+
+
+
+    </main>
 </body>
+
 </html>
