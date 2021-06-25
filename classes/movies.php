@@ -39,9 +39,9 @@ class Movies_one
 
 /* $MissionImpossible = new Movies_one();
 $MissionImpossible->title = 'mission impossible';
-$MissionImpossible->is_Purchase('No');
+$MissionImpossible->is_Purchase(false);
 var_dump($MissionImpossible->purchase);
-$MissionImpossible->is_Purchase('Yes');
+$MissionImpossible->is_Purchase(true);
 var_dump($MissionImpossible->purchase); */
 
 ////////////////////////////////////////////////////////////////////////////////////////
