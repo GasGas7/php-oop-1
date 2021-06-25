@@ -14,7 +14,6 @@ class Movies_one
     public $overview;
     public $year;
     public $genre;
-    public $mainActors;
     public $boxOffice;
     public $poster;
     public $purchase = false;
@@ -52,7 +51,6 @@ class Movies_two{
     public $overview;
     public $year;
     public $genre;
-    public $mainActors;
     public $boxOffice;
     public $poster;
 
@@ -63,16 +61,14 @@ class Movies_two{
      * @param string $overview
      * @param integer $year
      * @param string $genre
-     * @param string $mainActors
      * @param int $boxOffice
      * @param string $poster
      */
-     function __construct(string $title, string $overview, int $year, string $genre, string $mainActors, string $boxOffice, string $poster) {
+     function __construct(string $title, string $overview, int $year, string $genre, string $boxOffice, string $poster) {
         $this->title = $title;
         $this->overview = $overview;
         $this->year = $year;
         $this->genre = $genre;
-        $this->mainActors = $mainActors;
         $this->boxOffice = $boxOffice;
         $this->poster = $poster;
     }
